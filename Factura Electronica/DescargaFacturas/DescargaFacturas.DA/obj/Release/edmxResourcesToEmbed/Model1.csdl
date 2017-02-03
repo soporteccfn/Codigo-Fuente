@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCFNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedByName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdatedBy" Type="Int32" />
+    <Property Name="LastUpdatedByName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ActiveFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Roles_CreatedBy" FromRole="Roles" ToRole="Users" />
+    <NavigationProperty Name="Users1" Relationship="Self.FK_Roles_LastUpdatedBy" FromRole="Roles" ToRole="Users" />
+    <NavigationProperty Name="UserRoleXREF" Relationship="Self.FK_UserRoleXREF_RoleId" FromRole="Roles" ToRole="UserRoleXREF" />
+  </EntityType>
+  <EntityType Name="SysParameters">
+    <Key>
+      <PropertyRef Name="ParameterId" />
+    </Key>
+    <Property Name="ParameterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserRoleXREF">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_UserRoleXREF_RoleId" FromRole="UserRoleXREF" ToRole="Roles" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_UserRoleXREF_UserId" FromRole="UserRoleXREF" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Lastname" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedByName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdatedBy" Type="Int32" />
+    <Property Name="LastUpdatedByName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ActiveFlag" Type="Boolean" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Roles_CreatedBy" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="Roles1" Relationship="Self.FK_Roles_LastUpdatedBy" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="UserRoleXREF" Relationship="Self.FK_UserRoleXREF_UserId" FromRole="Users" ToRole="UserRoleXREF" />
+    <NavigationProperty Name="Users1" Relationship="Self.FK_Users_LastUpdatedBy" FromRole="Users" ToRole="Users1" />
+    <NavigationProperty Name="Users2" Relationship="Self.FK_Users_LastUpdatedBy" FromRole="Users1" ToRole="Users" />
+    <NavigationProperty Name="Users11" Relationship="Self.FK_Users_UserId" FromRole="Users" ToRole="Users1" />
+    <NavigationProperty Name="Users3" Relationship="Self.FK_Users_UserId" FromRole="Users1" ToRole="Users" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="StatusName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Statuses" Relationship="CCFNModel.FK_Users_StatusId" FromRole="Users" ToRole="Statuses" />
+    <Property Name="RFC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="CommercialName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UserRoles" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Logs" Relationship="CCFNModel.FK_Logs_PerformedBy" FromRole="Users" ToRole="Logs" />
+  </EntityType>
+  <Association Name="FK_Roles_CreatedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Roles_LastUpdatedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="LastUpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoleXREF_RoleId">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="UserRoleXREF" Type="Self.UserRoleXREF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="UserRoleXREF">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoleXREF_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UserRoleXREF" Type="Self.UserRoleXREF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserRoleXREF">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_LastUpdatedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="LastUpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CCFNEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="SysParameters" EntityType="Self.SysParameters" />
+    <EntitySet Name="UserRoleXREF" EntityType="Self.UserRoleXREF" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Roles_CreatedBy" Association="Self.FK_Roles_CreatedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Roles_LastUpdatedBy" Association="Self.FK_Roles_LastUpdatedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoleXREF_RoleId" Association="Self.FK_UserRoleXREF_RoleId">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoleXREF" EntitySet="UserRoleXREF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoleXREF_UserId" Association="Self.FK_UserRoleXREF_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoleXREF" EntitySet="UserRoleXREF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_LastUpdatedBy" Association="Self.FK_Users_LastUpdatedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserId" Association="Self.FK_Users_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Statuses" EntityType="CCFNModel.Statuses" />
+    <AssociationSet Name="FK_Users_StatusId" Association="CCFNModel.FK_Users_StatusId">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Actions" EntityType="CCFNModel.Actions" />
+    <EntitySet Name="Logs" EntityType="CCFNModel.Logs" />
+    <AssociationSet Name="FK_Logs_PerformedBy" Association="CCFNModel.FK_Logs_PerformedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Logs_ActionId" Association="CCFNModel.FK_Logs_ActionId">
+      <End Role="Actions" EntitySet="Actions" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+    <EntitySet Name="Facturas" EntityType="CCFNModel.Facturas" />
+  </EntityContainer>
+  <EntityType Name="Statuses">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="CCFNModel.FK_Users_StatusId" FromRole="Statuses" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Users_StatusId">
+    <End Type="CCFNModel.Statuses" Role="Statuses" Multiplicity="0..1" />
+    <End Type="CCFNModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Actions">
+    <Key>
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ActionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Logs" Relationship="CCFNModel.FK_Logs_ActionId" FromRole="Actions" ToRole="Logs" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActionId" Type="Int32" />
+    <Property Name="ActionName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PerformedBy" Type="Int32" />
+    <Property Name="PerformedByName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Performed" Type="DateTime" Precision="3" />
+    <Property Name="SearchText" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <NavigationProperty Name="Users" Relationship="CCFNModel.FK_Logs_PerformedBy" FromRole="Logs" ToRole="Users" />
+    <NavigationProperty Name="Actions" Relationship="CCFNModel.FK_Logs_ActionId" FromRole="Logs" ToRole="Actions" />
+  </EntityType>
+  <Association Name="FK_Logs_PerformedBy">
+    <End Type="CCFNModel.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="CCFNModel.Logs" Role="Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="PerformedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Logs_ActionId">
+    <End Type="CCFNModel.Actions" Role="Actions" Multiplicity="0..1" />
+    <End Type="CCFNModel.Logs" Role="Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actions">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="FacturaId" />
+    </Key>
+    <Property Name="FacturaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RFC" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="PDF" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="XML" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Folio" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Sucursal" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CodigoCliente" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Subtotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IVA" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IEPS" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Serie" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

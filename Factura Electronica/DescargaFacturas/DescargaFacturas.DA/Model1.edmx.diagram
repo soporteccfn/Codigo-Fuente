@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="152df10df4444844ae0b322780603861" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="CCFNModel.Roles" Width="1.5" PointX="3.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCFNModel.SysParameters" Width="1.5" PointX="6.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCFNModel.UserRoleXREF" Width="1.5" PointX="3.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCFNModel.Users" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="CCFNModel.FK_Roles_CreatedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="CCFNModel.FK_Roles_LastUpdatedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="CCFNModel.FK_UserRoleXREF_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="CCFNModel.FK_UserRoleXREF_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CCFNModel.FK_Users_LastUpdatedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="CCFNModel.FK_Users_UserId" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CCFNModel.Statuses" Width="1.5" PointX="3.5" PointY="7.625" />
+        <AssociationConnector Association="CCFNModel.FK_Users_StatusId" />
+        <EntityTypeShape EntityType="CCFNModel.Actions" Width="1.5" PointX="6.25" PointY="9.75" />
+        <EntityTypeShape EntityType="CCFNModel.Logs" Width="1.5" PointX="3.5" PointY="9.75" />
+        <AssociationConnector Association="CCFNModel.FK_Logs_PerformedBy" />
+        <AssociationConnector Association="CCFNModel.FK_Logs_ActionId" />
+        <EntityTypeShape EntityType="CCFNModel.Facturas" Width="1.5" PointX="6.25" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

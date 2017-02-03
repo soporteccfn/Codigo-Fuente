@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCFNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Actions">
+    <Key>
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ActionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="FacturaId" />
+    </Key>
+    <Property Name="FacturaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RFC" Type="varchar" MaxLength="16" />
+    <Property Name="PDF" Type="varchar" MaxLength="256" />
+    <Property Name="XML" Type="varchar" MaxLength="256" />
+    <Property Name="Folio" Type="varchar" MaxLength="32" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="8" />
+    <Property Name="CodigoCliente" Type="varchar" MaxLength="64" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="128" />
+    <Property Name="ID" Type="varchar" MaxLength="16" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Subtotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IVA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IEPS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Serie" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionId" Type="int" />
+    <Property Name="ActionName" Type="varchar" MaxLength="16" StoreGeneratedPattern="Computed" />
+    <Property Name="PerformedBy" Type="int" />
+    <Property Name="PerformedByName" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+    <Property Name="Performed" Type="datetime" />
+    <Property Name="SearchText" Type="varchar" MaxLength="256" />
+    <Property Name="InvoiceId" Type="int" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="64" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedByName" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="LastUpdatedBy" Type="int" />
+    <Property Name="LastUpdatedByName" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+    <Property Name="ActiveFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Statuses">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="SysParameters">
+    <Key>
+      <PropertyRef Name="ParameterId" />
+    </Key>
+    <Property Name="ParameterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="64" />
+    <Property Name="Value" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="UserRoleXREF">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="64" />
+    <Property Name="Lastname" Type="varchar" MaxLength="64" />
+    <Property Name="Phone" Type="varchar" MaxLength="32" />
+    <Property Name="Email" Type="varchar" MaxLength="64" />
+    <Property Name="Mobile" Type="varchar" MaxLength="32" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedByName" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="LastUpdatedBy" Type="int" />
+    <Property Name="LastUpdatedByName" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+    <Property Name="ActiveFlag" Type="bit" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="32" />
+    <Property Name="Password" Type="varchar" MaxLength="32" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="StatusName" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+    <Property Name="RFC" Type="varchar" MaxLength="16" />
+    <Property Name="CommercialName" Type="varchar" MaxLength="128" />
+    <Property Name="UserRoles" Type="varchar" MaxLength="128" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_Logs_ActionId">
+    <End Role="Actions" Type="Self.Actions" Multiplicity="0..1" />
+    <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actions">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Logs_PerformedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="PerformedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Roles_CreatedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Roles_LastUpdatedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="LastUpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoleXREF_RoleId">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="UserRoleXREF" Type="Self.UserRoleXREF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="UserRoleXREF">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoleXREF_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UserRoleXREF" Type="Self.UserRoleXREF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserRoleXREF">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_LastUpdatedBy">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="LastUpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_StatusId">
+    <End Role="Statuses" Type="Self.Statuses" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CCFNModelStoreContainer">
+    <EntitySet Name="Actions" EntityType="Self.Actions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysParameters" EntityType="Self.SysParameters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoleXREF" EntityType="Self.UserRoleXREF" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Logs_ActionId" Association="Self.FK_Logs_ActionId">
+      <End Role="Actions" EntitySet="Actions" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Logs_PerformedBy" Association="Self.FK_Logs_PerformedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Roles_CreatedBy" Association="Self.FK_Roles_CreatedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Roles_LastUpdatedBy" Association="Self.FK_Roles_LastUpdatedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoleXREF_RoleId" Association="Self.FK_UserRoleXREF_RoleId">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoleXREF" EntitySet="UserRoleXREF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoleXREF_UserId" Association="Self.FK_UserRoleXREF_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoleXREF" EntitySet="UserRoleXREF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_LastUpdatedBy" Association="Self.FK_Users_LastUpdatedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_StatusId" Association="Self.FK_Users_StatusId">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserId" Association="Self.FK_Users_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

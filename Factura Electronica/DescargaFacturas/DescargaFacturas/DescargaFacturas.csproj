@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89868537-F127-435A-B7AF-7C018EC94FE0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DescargaFacturas</RootNamespace>
+    <AssemblyName>DescargaFacturas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2016.1.225.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.1.225.45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\lib\RCAJAX\2016.1.225.45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2016.1.106.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.1.225.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2016.1.106.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.1.225.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Site.Master" />
+    <None Include="Properties\PublishProfiles\DescargaFacturas.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="catalogs\parameters.aspx" />
+    <Content Include="catalogs\roles.aspx" />
+    <Content Include="catalogs\statuses.aspx" />
+    <Content Include="catalogs\users.aspx" />
+    <Content Include="css\Main.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\styles1.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="images\address-book.png" />
+    <Content Include="images\add_icon.gif" />
+    <Content Include="images\add_small.png" />
+    <Content Include="images\airplane-4-24.png" />
+    <Content Include="images\arrow-4-16.png" />
+    <Content Include="images\arrow-down.png" />
+    <Content Include="images\arrow1.png" />
+    <Content Include="images\arrow2.png" />
+    <Content Include="images\attachments_icon.png" />
+    <Content Include="images\attachment_icon.jpg" />
+    <Content Include="images\attachment_icon.png" />
+    <Content Include="images\barcode24.png" />
+    <Content Include="images\bus16.png" />
+    <Content Include="images\cancel_icon.gif" />
+    <Content Include="images\ccfn-logo.png" />
+    <Content Include="images\change-password-icon.png" />
+    <Content Include="images\check.png" />
+    <Content Include="images\circle-dashed-6-24.png" />
+    <Content Include="images\cuadros.png" />
+    <Content Include="images\data_up.png" />
+    <Content Include="images\delete-16.png" />
+    <Content Include="images\delete16.png" />
+    <Content Include="images\delete2.png" />
+    <Content Include="images\delete_icon.png" />
+    <Content Include="images\deliverable_fields.png" />
+    <Content Include="images\devfie.png" />
+    <Content Include="images\document.png" />
+    <Content Include="images\document16.png" />
+    <Content Include="images\documentright16.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edit16.png" />
+    <Content Include="images\eraser.png" />
+    <Content Include="images\Error.png" />
+    <Content Include="images\espacios.png" />
+    <Content Include="images\excel.gif" />
+    <Content Include="images\fieldcolumn.png" />
+    <Content Include="images\folder-2-16.png" />
+    <Content Include="images\home-4-16.png" />
+    <Content Include="images\home16.png" />
+    <Content Include="images\icon_approve.png" />
+    <Content Include="images\icon_cancel.png" />
+    <Content Include="images\icon_Delete.png" />
+    <Content Include="images\icon_edit.gif" />
+    <Content Include="images\icon_email.gif" />
+    <Content Include="images\icon_keys.gif" />
+    <Content Include="images\icon_lock.png" />
+    <Content Include="images\icon_lock_16x16.png" />
+    <Content Include="images\icon_lock_small.png" />
+    <Content Include="images\icon_save.png" />
+    <Content Include="images\icon_save16.png" />
+    <Content Include="images\ledgray16.png" />
+    <Content Include="images\ledgreen16.png" />
+    <Content Include="images\ledred16.png" />
+    <Content Include="images\ledyellow16.png" />
+    <Content Include="images\listing-option.png" />
+    <Content Include="images\Lists.bmp" />
+    <Content Include="images\Lists_atts.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\loading3.gif" />
+    <Content Include="images\logo-megaplast.png" />
+    <Content Include="images\logo-megaplast1.png" />
+    <Content Include="images\mail_new.png" />
+    <Content Include="images\nav_right_blue16.png" />
+    <Content Include="images\nav_up_blue24.png" />
+    <Content Include="images\NextSeqNo.png" />
+    <Content Include="images\NextSeqYes.png" />
+    <Content Include="images\numbered-list.png" />
+    <Content Include="images\package_ok.png" />
+    <Content Include="images\parts_icon.png" />
+    <Content Include="images\pdf_icon.png" />
+    <Content Include="images\planner-24.png" />
+    <Content Include="images\play16blue.png" />
+    <Content Include="images\play24.png" />
+    <Content Include="images\plus-black-symbol.png" />
+    <Content Include="images\printer.png" />
+    <Content Include="images\printing-tool.png" />
+    <Content Include="images\prod_line_clerk.png" />
+    <Content Include="images\prod_line_dev16.png" />
+    <Content Include="images\prod_line_dev24.png" />
+    <Content Include="images\prod_line_ind.png" />
+    <Content Include="images\reply.png" />
+    <Content Include="images\right.png" />
+    <Content Include="images\search-3-24.png" />
+    <Content Include="images\sign-out-option.png" />
+    <Content Include="images\sterilization16.png" />
+    <Content Include="images\sterilization24.png" />
+    <Content Include="images\Success.png" />
+    <Content Include="images\table.png" />
+    <Content Include="images\taks_icon.gif" />
+    <Content Include="images\target_icon.jpg" />
+    <Content Include="images\tasks_icon.jpg" />
+    <Content Include="images\tasks_icon.png" />
+    <Content Include="images\text-file-3-16.png" />
+    <Content Include="images\text-file-4-16.png" />
+    <Content Include="images\time-8-16.png" />
+    <Content Include="images\To do list.bmp" />
+    <Content Include="images\To_do_list.png" />
+    <Content Include="images\trash1.png" />
+    <Content Include="images\trashcan.png" />
+    <Content Include="images\tree-structure-16.png" />
+    <Content Include="images\Truck-24.png" />
+    <Content Include="images\undo.png" />
+    <Content Include="images\undo16.png" />
+    <Content Include="images\undo32.png" />
+    <Content Include="images\user-info-icon.png" />
+    <Content Include="images\user-roles_icon.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\user16.png" />
+    <Content Include="images\view-details-16.png" />
+    <Content Include="images\view.png" />
+    <Content Include="images\view16.png" />
+    <Content Include="images\warning.png" />
+    <Content Include="images\_previmg2.png" />
+    <Content Include="images\_previmg3.png" />
+    <Content Include="images\_previmg4.png" />
+    <Content Include="images\_previmg5.png" />
+    <Content Include="images\_previmg6.png" />
+    <Content Include="images\_previmg8.png" />
+    <Content Include="invoices\invoices.aspx" />
+    <Content Include="invoices\invoicesgetmultiple.aspx" />
+    <Content Include="invoices\invoicesget.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logs\viewlogs.aspx" />
+    <Content Include="main.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="catalogs\parameters.aspx.cs">
+      <DependentUpon>parameters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogs\parameters.aspx.designer.cs">
+      <DependentUpon>parameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogs\roles.aspx.cs">
+      <DependentUpon>roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogs\roles.aspx.designer.cs">
+      <DependentUpon>roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogs\statuses.aspx.cs">
+      <DependentUpon>statuses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogs\statuses.aspx.designer.cs">
+      <DependentUpon>statuses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogs\users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogs\users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoices\invoices.aspx.cs">
+      <DependentUpon>invoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoices\invoices.aspx.designer.cs">
+      <DependentUpon>invoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoices\invoicesgetmultiple.aspx.cs">
+      <DependentUpon>invoicesgetmultiple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoices\invoicesgetmultiple.aspx.designer.cs">
+      <DependentUpon>invoicesgetmultiple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoices\invoicesget.aspx.cs">
+      <DependentUpon>invoicesget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoices\invoicesget.aspx.designer.cs">
+      <DependentUpon>invoicesget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logs\viewlogs.aspx.cs">
+      <DependentUpon>viewlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logs\viewlogs.aspx.designer.cs">
+      <DependentUpon>viewlogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DescargaFacturas.BL\DescargaFacturas.BL.csproj">
+      <Project>{5d1c8ce3-2673-49b6-b5c3-68d4a1794ce9}</Project>
+      <Name>DescargaFacturas.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DescargaFacturas.DA\DescargaFacturas.DA.csproj">
+      <Project>{b4595388-ce48-4845-b0ee-31c3dc6a8c9c}</Project>
+      <Name>DescargaFacturas.DA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3763</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3763/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="False" UseAjaxifiedTemplates="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

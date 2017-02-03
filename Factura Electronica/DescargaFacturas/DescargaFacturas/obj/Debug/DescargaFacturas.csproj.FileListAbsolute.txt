@@ -1,0 +1,114 @@
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\ApplicationInsights.config
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\csc.exe
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\System.Collections.Immutable.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\vbc.exe
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\VBCSCompiler.exe
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\roslyn\VBCSCompiler.exe.config
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.dll.config
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.pdb
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.BL.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.DA.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\EntityFramework.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\EntityFramework.SqlServer.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.Web.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.WindowsServer.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.ApplicationInsights.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.UI.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.UI.Skins.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Core.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Zip.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Flow.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.Spreadsheet.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.BL.pdb
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.DA.pdb
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\EntityFramework.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\EntityFramework.SqlServer.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.Web.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.WindowsServer.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.ApplicationInsights.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.UI.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Core.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Zip.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Flow.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.Spreadsheet.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.csprojResolveAssemblyReference.cache
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.dll.licenses
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\ApplicationInsights.config
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\csc.exe
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\vbc.exe
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\VBCSCompiler.exe
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.dll.config
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.BL.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.DA.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\EntityFramework.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\EntityFramework.SqlServer.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.Web.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.UI.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.UI.Skins.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Core.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Zip.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Flow.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.Spreadsheet.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.BL.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\DescargaFacturas.DA.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\EntityFramework.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\EntityFramework.SqlServer.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.Web.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.UI.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Core.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Zip.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Flow.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Web.Spreadsheet.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\bin\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.csprojResolveAssemblyReference.cache
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.dll.licenses
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas\obj\Debug\DescargaFacturas.pdb

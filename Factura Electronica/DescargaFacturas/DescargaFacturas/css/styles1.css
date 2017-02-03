@@ -1,0 +1,99 @@
+﻿/*common*/
+body {
+    margin: 0;
+}
+ 
+.pageLayout {
+    font: 14px 'Segoe UI', Arial, sans-serif;
+	background-color: white;
+}
+ 
+.pageLayout h1,
+.pageLayout h2 {
+    font-weight: normal;
+    color: #c03234;
+}
+ 
+.pageLayout h1 {
+    margin: 0;
+    font-size: 2.3em;
+}
+ 
+.pageLayout h2 {
+    font-size: 1.23em;
+}
+ 
+ 
+/*header*/
+.pageLayout .header {
+    background-color: white;
+}
+ 
+.pageLayout .header p {
+    font-size: 1.43em;
+}
+ 
+.pageLayout .header img {
+    margin: auto;
+    display: block;
+}
+ 
+/*content*/
+.content {
+    text-align: center;
+}
+ 
+.content .t-container {
+    padding: 0;
+}
+ 
+.content img {
+    display: inline-block;
+}
+ 
+.content .description {
+    height: 230px;
+    margin: 0 -15px;
+    padding: 5px 20px;
+}
+ 
+.deviceImage {
+    padding-top: 20px;
+}
+ 
+.deviceIcon  {
+    padding: 15px 0;
+}
+ 
+@media only screen and (min-width: 769px) {
+ 
+    .pageLayout .header {
+        padding: 4% 4% 0;
+    }
+}
+ 
+@media only screen and (max-width: 768px) {
+ 
+    .pageLayout .header {
+        text-align: center;
+    }
+}
+ 
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+ 
+    .content .description {
+        height: 170px;
+    }
+}
+ 
+@media only screen and (max-width: 360px) {
+ 
+    .content .description {
+        height: auto;
+    }
+}
+
+.rightborder
+{
+	border-right: 1px solid #ccc
+}

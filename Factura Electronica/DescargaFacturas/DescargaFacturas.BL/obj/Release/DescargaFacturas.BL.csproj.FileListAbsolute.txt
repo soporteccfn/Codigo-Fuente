@@ -1,0 +1,12 @@
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\DescargaFacturas.BL.dll.config
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\DescargaFacturas.BL.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\DescargaFacturas.BL.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\DescargaFacturas.DA.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\EntityFramework.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\DescargaFacturas.DA.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\EntityFramework.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\obj\Release\DescargaFacturas.BL.csprojResolveAssemblyReference.cache
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\obj\Release\DescargaFacturas.BL.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.BL\obj\Release\DescargaFacturas.BL.pdb

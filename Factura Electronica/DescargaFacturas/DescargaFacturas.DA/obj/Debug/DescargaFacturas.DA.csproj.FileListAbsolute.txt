@@ -1,0 +1,20 @@
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\DescargaFacturas.DA.dll.config
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\DescargaFacturas.DA.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\DescargaFacturas.DA.pdb
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\obj\Debug\DescargaFacturas.DA.csprojResolveAssemblyReference.cache
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\obj\Debug\DescargaFacturas.DA.dll
+c:\users\clue\documents\visual studio 2015\Projects\DescargaFacturas\DescargaFacturas.DA\obj\Debug\DescargaFacturas.DA.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\DescargaFacturas.DA.dll.config
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\DescargaFacturas.DA.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\DescargaFacturas.DA.pdb
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\obj\Debug\DescargaFacturas.DA.csprojResolveAssemblyReference.cache
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\obj\Debug\DescargaFacturas.DA.dll
+C:\Users\IT\OneDrive\Factura Electronica\DescargaFacturas\DescargaFacturas.DA\obj\Debug\DescargaFacturas.DA.pdb
