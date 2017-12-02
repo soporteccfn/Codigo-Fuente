@@ -3,9 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head id="Head1" runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCFN - ACCESO</title>
-	<link href="css/styles1.css" rel="stylesheet" type="text/css" />
-	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<!-- Icon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="css/styles1.css" rel="stylesheet" type="text/css"/>
+	<link href="css/styles.css" rel="stylesheet" type="text/css"/>
 	<style type="text/css">
 		.rbClearButton,
 		.rbClearButton:hover {
@@ -100,17 +106,20 @@
 												</p>
 											</div>
 										</telerik:LayoutColumn>
-										<telerik:LayoutColumn Span="4" SpanXs="5">
+										<telerik:LayoutColumn Span="4" SpanXs="5" CssClass="rightborder">
 											<div class="description">
 												<h2>Ingrese con sus datos</h2>
 												<br />
-												<telerik:RadTextBox ID="txtUsername" runat="server" Label="Usuario:" />
+												<%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
+												<telerik:RadTextBox ID="txtUsername" runat="server" Label="Usuario:" LabelWidth="70px" Width="185px" />
 												<br /><br />
-												<telerik:RadTextBox ID="txtPassword" runat="server" TextMode="Password" Label="Contraseña:" />
+												<telerik:RadTextBox ID="txtPassword" runat="server" TextMode="Password" Label="Contraseña:" LabelWidth="70px" Width="185px"/>
 												<br /><br />
 												<telerik:RadButton ID="btnLogin" runat="server" Text="Ingresar" onclick="btnLogin_Click" Skin="MetroTouch" Primary="true" CausesValidation="false" />
 												<br /><br />
-												<telerik:RadLinkButton ID="lnkSendPassword" runat="server" Text="Olvidé mi contraseña" OnClientClicked="PasswordRetrive" CssClass="rbClearButton rbHyperlinkButton"></telerik:RadLinkButton><br />
+												<telerik:RadLinkButton ID="lnkSendPassword" runat="server" Text="Olvidé mi contraseña" OnClientClicked="PasswordRetrive" CssClass="rbClearButton rbHyperlinkButton"></telerik:RadLinkButton>
+												<span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Contacto" data-content="adriana.ochoa@superchivas.com.mx, paula.rodriguez@superchivas.com.mx"></span>
+												<br />
 												<telerik:RadLabel ID="lblError" runat="server" Visible="false" Font-Bold="true" ForeColor="Red"></telerik:RadLabel>
 												<telerik:RadLabel ID="lblPasswordSent" runat="server" Visible="false" Font-Bold="true" ForeColor="Blue"></telerik:RadLabel>
 											</div>
@@ -126,4 +135,14 @@
 		</div>
     </form>
 </body>
+<!-- jQuery 2.2.3 -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
 </html>

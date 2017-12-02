@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="Default Web Site/DescargaFacturas" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\IT\\OneDrive\\Factura\ Electronica\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\IT\\OneDrive\\Factura\ Electronica\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp$" />
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/FacturasPruebas" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Sistemas\\Desktop\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Sistemas\\Desktop\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="CCFNDB-Web.config Connection String" description="" value="Database=CCFN;User ID=CCFNuser;Server=dev.nem.mx,2500;Persist Security Info=False;password=CCFNpa55w()rd;" tags="">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\IT\\OneDrive\\Factura\ Electronica\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNDB']/@connectionString" />
+  <parameter name="CCFNDB-Web.config Connection String" description="" value="Database=CCFN;User ID=sa;Server=192.168.0.236;Persist Security Info=False;password=sa@ccfn!123;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sistemas\\Desktop\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNDB']/@connectionString" />
   </parameter>
-  <parameter name="CCFNEntities-Web.config Connection String" description="" value="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=192.168.0.236;Initial Catalog=ccfn;Persist Security Info=True;User ID=sa;Password=sa@ccn!123&quot;" tags="">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\IT\\OneDrive\\Factura\ Electronica\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNEntities']/@connectionString" />
+  <parameter name="CCFNEntities-Web.config Connection String" description="" value="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=192.168.0.236;Initial Catalog=ccfn;Persist Security Info=True;User ID=sa;Password=sa@ccfn!123&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sistemas\\Desktop\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNEntities']/@connectionString" />
   </parameter>
 </parameters>

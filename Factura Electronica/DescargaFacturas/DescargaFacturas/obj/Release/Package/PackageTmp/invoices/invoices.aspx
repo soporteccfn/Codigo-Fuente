@@ -72,6 +72,9 @@
 							<td>
 								<telerik:RadTextBox ID="txtFolio" runat="server" />
 							</td>
+							<td>
+								<telerik:RadCheckBox ID="chkRecibos" runat="server" Text="Recibos de Pago" OnClick="chkRecibos_Click"></telerik:RadCheckBox>
+							</td>
 						</tr>
 						<tr>
 							<td><label>Con fecha desde:</label></td>
@@ -111,7 +114,9 @@
 			</tr>
 			<tr>
 				<td>
-					<telerik:RadGrid ID="RadGrid1" runat="server" AllowFilteringByColumn="false" AllowPaging="false" AllowSorting="true" CellSpacing="0" GridLines="None" FilterMenu-EnableImageSprites="false" AutoGenerateColumns="false"  OnNeedDataSource="RadGrid1_NeedDataSource" ClientSettings-Selecting-AllowRowSelect="true" AllowMultiRowSelection="true">
+					<br /><br />
+					<label>Si no aparece el &iacute;cono para descargar PDF o XML, por favor comun&iacute;quese con el departamento de atenci&oacute;n al cliente, indicando el folio de la factura que no puede descargar.</label><br /><br />
+					<telerik:RadGrid ID="RadGrid1" runat="server" AllowFilteringByColumn="false" AllowPaging="true" AllowSorting="true" CellSpacing="0" GridLines="None" FilterMenu-EnableImageSprites="false" AutoGenerateColumns="false"  OnNeedDataSource="RadGrid1_NeedDataSource" ClientSettings-Selecting-AllowRowSelect="true" AllowMultiRowSelection="true" PageSize="10" PagerStyle-Mode="NextPrevNumericAndAdvanced" OnItemDataBound="RadGrid1_ItemDataBound">
 						<ExportSettings HideStructureColumns="true" Excel-Format="ExcelML" ExportOnlyData="true" FileName="CCFNFacturas" IgnorePaging="true" />
 						<MasterTableView DataKeyNames="FacturaId" CommandItemDisplay="Top" NoMasterRecordsText="No hay facturas disponibles." ClientDataKeyNames="FacturaId">
 							<CommandItemSettings ShowRefreshButton="true" ShowExportToExcelButton="true" ShowAddNewRecordButton="false" RefreshText="Refrescar" />
@@ -130,6 +135,8 @@
 								<telerik:GridBoundColumn DataField="IVA" HeaderText="IVA" UniqueName="colIVA" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:C2}" />
 								<telerik:GridBoundColumn DataField="IEPS" HeaderText="IEPS" UniqueName="colIEPS" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:C2}" />
 								<telerik:GridBoundColumn DataField="TOTAL" HeaderText="TOTAL" UniqueName="colTOTAL" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:C2}" />
+								<telerik:GridBoundColumn DataField="PDF" UniqueName="colPDFFILE" Display="false" />
+								<telerik:GridBoundColumn DataField="XML" UniqueName="colXMLFILE" Display="false" />
 								<telerik:GridTemplateColumn HeaderText="PDF" UniqueName="colPDF" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
 									<ItemTemplate>
 										<asp:ImageButton ID="openPDF" runat="server" ImageUrl="../images/pdf_icon.png" Width="16px" Height="16px"
@@ -153,4 +160,23 @@
 			</tr>
 		</table>
 	</div>
+	<style type="text/css">
+		.RadButton .rbToggleCheckboxChecked:before {
+			content: "";
+		}
+		.RadButton_Metro.rbCheckBox .rbIcon.rbToggleCheckbox, .RadButton_Metro.rbCheckBox .rbIcon.rbToggleCheckboxChecked {
+			margin: .075em .7em 0 0;
+		}
+		.RadButton_Metro.RadButton:active, .RadButton_Metro.RadButton:focus, .RadButton_Metro.RadButton.rbHovered:active, .RadButton_Metro.RadButton.rbHovered:focus{
+			border: initial;
+			background-color: initial;
+			color: initial;
+		}
+		.RadButton_Metro.rbCheckBox.rbHovered .rbText, .RadButton_Metro.rbCheckBox.rbHovered.rbSelected .rbText {
+			color: initial;
+		}
+		button[name='ctl00$cphMain$chkRecibos'] {
+			margin-left: 15px;
+		}
+	</style>
 </asp:Content>

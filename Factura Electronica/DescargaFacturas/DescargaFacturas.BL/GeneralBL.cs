@@ -50,7 +50,48 @@ namespace DescargaFacturas.BL
 				}, conn, null);
 		}
 
-		public static void Log(int actionId, int userId, string searchText, int? invoiceId)
+
+        public static DataTable GetInvoicesRecibos(bool isAdmin, string RFC, string Serie, string Folio, DateTime? Desde, DateTime? Hasta, int UserId, string Sucursal, string CodigoCliente, string RFC1)
+        {
+            Log((int)Constants.Actions.BUSQUEDA
+                , UserId,
+                (Serie.Equals("") ? "" : "Serie: " + Serie + ".") + " " +
+                (Folio.Equals("") ? "" : "Folio: " + Folio + ".") + " " +
+                (Desde.HasValue ? "Desde: " + Desde.Value.ToString("yyyy-MM-dd") + "." : "") + " " +
+                (Hasta.HasValue ? "Hasta: " + Hasta.Value.ToString("yyyy-MM-dd") + "." : "") + " " +
+                (Sucursal.Equals("") ? "" : "Sucursal: " + Sucursal + ".") + " " +
+                (CodigoCliente.Equals("") ? "" : "CodigoCliente: " + CodigoCliente + ".") + " " +
+                (RFC1.Equals("") ? "" : "RFC: " + RFC1 + ".") + " "
+                , null);
+            using (var conn = S.GetConnection())
+                return S.RunQuery(@"
+					SELECT FacturaId, RFC, PDF, XML, REPLACE(LTRIM(REPLACE(Folio,'0',' ')),' ','0') AS Folio, Fecha, Sucursal, CodigoCliente, RazonSocial, ID, Total, Subtotal, IVA, IEPS, Serie
+						FROM Facturas
+						WHERE (RFC = @p1 OR @p2 = 1)
+							AND (Folio LIKE @p3 OR @p4 = '')
+							AND (Fecha >= @p5 OR @p6 = '')
+							AND (Fecha <= @p7 OR @p8 = '')
+							AND (Serie = @p9 OR @p10 = '')
+							AND (Sucursal = @p11 OR @p12 = '')
+							AND (CodigoCliente = @p13 OR @p14 = '')
+							AND (RFC = @p15 OR @p16 = '')
+                            AND (PDF LIKE 'recibopago%')
+						ORDER BY Folio DESC
+					", new AL()
+                {
+                    (RFC ?? "")
+                    , (isAdmin ? 1 : 0)
+                    , "%" + Folio + "%", Folio
+                    , (Desde.HasValue ? Desde.Value.ToString("yyyy-MM-dd") : ""), (Desde.HasValue ? Desde.Value.ToString("yyyy-MM-dd") : "")
+                    , (Hasta.HasValue ? Hasta.Value.ToString("yyyy-MM-dd") : ""), (Hasta.HasValue ? Hasta.Value.ToString("yyyy-MM-dd") : "")
+                    , Serie, Serie
+                    , Sucursal, Sucursal
+                    , CodigoCliente, CodigoCliente
+                    , (isAdmin ? RFC1 : RFC), (isAdmin ? RFC1 : RFC)
+                }, conn, null);
+        }
+
+        public static void Log(int actionId, int userId, string searchText, int? invoiceId)
 		{
 			using (var db = new CCFNEntities())
 			{

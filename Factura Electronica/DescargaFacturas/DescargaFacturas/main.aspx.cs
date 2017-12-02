@@ -20,13 +20,15 @@ namespace DescargaFacturas
 					var rolesCSV = "";
 					lstRoles.ForEach(rol => rolesCSV += (rol.Name + ", "));
 					rolesCSV = rolesCSV.TrimEnd(',', ' ');
-					if (rolesCSV.Contains("ADMINISTRADOR"))
-					{
-						GetDataSourcePendingUsers();
-						RadGrid1.DataBind();
-					}
-					else
-						Response.Redirect("invoices/invoices.aspx");
+                    if (rolesCSV.Contains("ADMINISTRADOR"))
+                    {
+                        GetDataSourcePendingUsers();
+                        RadGrid1.DataBind();
+                    }
+                    else
+                    {
+                        Response.Redirect("invoices/invoices.aspx");
+                    }
 				}
 			}
 			catch (Exception ex)

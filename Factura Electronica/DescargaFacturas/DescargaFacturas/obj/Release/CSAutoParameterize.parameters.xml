@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="CCFNDB-Web.config Connection String" description="CCFNDB Connection String used in web.config by the application to access the database." defaultValue="Database=CCFN;User ID=CCFNuser;Server=dev.nem.mx,2500;Persist Security Info=False;password=CCFNpa55w()rd;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\IT\\OneDrive\\Factura\ Electronica\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNDB']/@connectionString" />
+  <parameter name="CCFNDB-Web.config Connection String" description="CCFNDB Connection String used in web.config by the application to access the database." defaultValue="Database=CCFN;User ID=sa;Server=192.168.0.236;Persist Security Info=False;password=sa@ccfn!123;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sistemas\\Desktop\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNDB']/@connectionString" />
   </parameter>
-  <parameter name="CCFNEntities-Web.config Connection String" description="CCFNEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=dev.nem.mx,2500;initial catalog=CCFN;persist security info=True;user id=CCFNuser;password=CCFNpa55w()rd;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\IT\\OneDrive\\Factura\ Electronica\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNEntities']/@connectionString" />
+  <parameter name="CCFNEntities-Web.config Connection String" description="CCFNEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.0.236;initial catalog=CCFN;persist security info=True;user id=sa;password=sa@ccfn!123;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sistemas\\Desktop\\DescargaFacturas\\DescargaFacturas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFNEntities']/@connectionString" />
   </parameter>
 </parameters>

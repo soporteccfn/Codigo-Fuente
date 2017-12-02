@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>CCFN</title>
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon">
     <link type="text/css" href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="~/css/Main.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">

@@ -19,7 +19,7 @@ namespace DescargaFacturas.invoices
 				if (Request["FileType"].ToString() == "PDF")
 				{
 					GeneralBL.Log((int)Constants.Actions.DESCARGA_PDF, ((Users)Session["CCFNUser"]).UserId, "", invoiceId);
-					var fileInfo = new FileInfo(filesPath + invoice.RFC + "\\" + invoice.PDF);
+					var fileInfo = new FileInfo(filesPath + "\\" + invoice.PDF);
 					Response.Clear();
 					Response.ClearHeaders();
 					Response.ClearContent();
@@ -27,13 +27,13 @@ namespace DescargaFacturas.invoices
 					Response.AddHeader("Content-Length", fileInfo.Length.ToString());
 					Response.ContentType = "text/plain";
 					Response.Flush();
-					Response.TransmitFile(filesPath + invoice.RFC + "\\" + invoice.PDF);
+					Response.TransmitFile(filesPath + "\\" + invoice.PDF);
 					Response.End();
 				}
 				else if (Request["FileType"].ToString() == "XML")
 				{
 					GeneralBL.Log((int)Constants.Actions.DESCARGA_XML, ((Users)Session["CCFNUser"]).UserId, "", invoiceId);
-					var fileInfo = new FileInfo(filesPath + invoice.RFC + "\\" + invoice.XML);
+					var fileInfo = new FileInfo(filesPath + "\\" + invoice.XML);
 					Response.Clear();
 					Response.ClearHeaders();
 					Response.ClearContent();
@@ -41,7 +41,7 @@ namespace DescargaFacturas.invoices
 					Response.AddHeader("Content-Length", fileInfo.Length.ToString());
 					Response.ContentType = "text/plain";
 					Response.Flush();
-					Response.TransmitFile(filesPath + invoice.RFC + "\\" + invoice.XML);
+					Response.TransmitFile(filesPath + "\\" + invoice.XML);
 					Response.End();
 				}
 			}

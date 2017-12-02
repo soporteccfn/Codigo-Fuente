@@ -573,3 +573,18 @@ font-size: 11px;
 @media print {
 	.page-break	{ display: block; page-break-before: always; }
 }
+
+/*CCFN Styles*/
+
+span[data-toggle="popover"] {
+	cursor: pointer;
+    font-size: 16px;
+	left: 10px;
+    position: relative;
+}
+
+.popover-title {
+    background-color: #efecec;
+    color: black;
+    font-style: italic;
+}
